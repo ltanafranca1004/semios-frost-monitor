@@ -15,6 +15,12 @@ describe('frost risk', () => {
     expect(getFrostStatus(coldest)).toBe('at-risk')
   })
 
+  it('treats a negative low like -0.5 °C as frost risk', () => {
+    const coldest = getColdestLow([reading('2027-01-15', -0.5), reading('2027-01-14', 3)], AS_OF)
+    expect(coldest).toBe(-0.5)
+    expect(getFrostStatus(coldest)).toBe('at-risk')
+  })
+
   it('ignores null readings instead of treating them as 0', () => {
     const readings = [reading('2027-01-13', 4), reading('2027-01-12', null), reading('2027-01-11', 2)]
     const coldest = getColdestLow(readings, AS_OF)
