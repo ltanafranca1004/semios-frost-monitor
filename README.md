@@ -53,7 +53,7 @@ Needs Node 20.19+ or 22.12+.
 
 - **Unit tests** cover the rules most likely to break silently: 0 °C and -0.5 °C count as risk, null isn't 0, the window edges (Jan 8 out, Jan 9 in), all-null gives "No data", and the offline rule.
 - **Integration test:** with a mocked API, the first load fails, Retry is pressed by keyboard, and the at-risk field appears first with the text "Frost risk".
-- **Proof they work:** I had Claude Code break the code on purpose seven ways (e.g. `<` instead of `<=`, null as 0, an 8-day window, sort removed, Retry disabled, badge with icon only). A test failed every time.
+- **Proof they work:** I had Claude Code break the code on purpose seven ways (e.g. `<` instead of `<=`, null as 0, an 8-day window, sort removed, Retry made to do nothing, badge with icon only). A test failed every time.
 - **Manual checks:** keyboard only, the page in grayscale, and `FAILURE_RATE = 1` for the error path.
 - **Next:** trend tests, Playwright end-to-end tests, and running tests in CI on every push.
 
