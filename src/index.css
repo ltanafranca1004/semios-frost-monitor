@@ -9,3 +9,71 @@ body {
   margin: 0;
   padding: 1rem;
 }
+
+main {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+/* Keep a clear focus ring for keyboard users */
+button:focus-visible {
+  outline: 3px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+thead th {
+  border-bottom: 2px solid #999;
+}
+
+.row-at-risk {
+  background: #eef4ff;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.badge-at-risk {
+  color: #1e3a8a;
+  background: #dbeafe;
+  font-weight: 600;
+}
+
+.badge-no-risk {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.badge-no-data {
+  color: #444;
+  background: #eee;
+}
+
+.error {
+  padding: 1rem;
+  border: 2px solid #b91c1c;
+  background: #fef2f2;
+}

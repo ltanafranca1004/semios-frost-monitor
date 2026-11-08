@@ -1,9 +1,7 @@
+import { FrostMonitor } from './components/FrostMonitor'
+
 function App() {
-  return (
-    <main>
-      <h1>Frost Monitor</h1>
-    </main>
-  )
+  return <FrostMonitor />
 }
 
 export default App
