@@ -181,6 +181,23 @@ export function sortFieldsByRisk(summaries: FieldSummary[]): FieldSummary[] {
   })
 }
 
+// Coldest station first, so the grower sees the coldest spots at a glance.
+// Stations with no data go last.
+export function sortStationsByColdest(summaries: StationSummary[]): StationSummary[] {
+  return [...summaries].sort((a, b) => {
+    if (a.coldestLowC === null && b.coldestLowC === null) {
+      return 0
+    }
+    if (a.coldestLowC === null) {
+      return 1
+    }
+    if (b.coldestLowC === null) {
+      return -1
+    }
+    return a.coldestLowC - b.coldestLowC
+  })
+}
+
 export function summarizeFields(
   fields: Field[],
   stations: Station[],

@@ -72,6 +72,47 @@ thead th {
   background: #eee;
 }
 
+.field-button {
+  font: inherit;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* Selected state is also exposed to screen readers via aria-pressed */
+.field-button[aria-pressed='true'] {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  color: #fff;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+.row-offline {
+  background: #fff7ed;
+}
+
+.badge-offline {
+  color: #9a3412;
+  background: #ffedd5;
+  font-weight: 600;
+}
+
+/* Hidden on screen, still read by screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .error {
   padding: 1rem;
   border: 2px solid #b91c1c;
